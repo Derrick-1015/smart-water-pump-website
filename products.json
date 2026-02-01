@@ -1,763 +1,374 @@
 {
-  "categories": [
+  "products": [
     {
-      "name": "DC PUMP - Ordinary Impeller",
-      "products": [
-        {
-          "id": "dc-ordinary-600w",
-          "name": "4SDS5-600w (0.75HP)",
-          "price": "KSh 20,000",
-          "specs": {
-            "Power": "600W (0.75HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "55M",
-            "Water Depth": "0-45M",
-            "Ideal Power": "2 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "dc-ordinary-800w",
-          "name": "4SDS5-800w (1.0HP)",
-          "price": "KSh 27,000",
-          "specs": {
-            "Power": "800W (1.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "80M",
-            "Water Depth": "0-66M",
-            "Ideal Power": "2 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "dc-ordinary-1100w",
-          "name": "4SDS5-1100w (1.5HP)",
-          "price": "KSh 30,000",
-          "specs": {
-            "Power": "1100W (1.5HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "120M",
-            "Water Depth": "0-99M",
-            "Ideal Power": "3 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "dc-ordinary-1500w",
-          "name": "4SDS5-1500w (2.0HP)",
-          "price": "KSh 36,000",
-          "specs": {
-            "Power": "1500W (2.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "168M",
-            "Water Depth": "0-139M",
-            "Ideal Power": "4 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "dc-ordinary-2200w",
-          "name": "4SDS5-2200w (3.0HP)",
-          "price": "KSh 42,900",
-          "specs": {
-            "Power": "2200W (3.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "235M",
-            "Water Depth": "0-194M",
-            "Ideal Power": "6 x 550W",
-            "Outlet": "1.5\""
-          }
-        },
-        {
-          "id": "dc-ordinary-3000w",
-          "name": "4SDS5-3000w (4.0HP)",
-          "price": "KSh 51,000",
-          "specs": {
-            "Power": "3000W (4.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "285M",
-            "Water Depth": "0-235M",
-            "Ideal Power": "8 x 550W",
-            "Outlet": "1.5\""
-          }
-        }
-      ]
+      "id": 1,
+      "name": "DC PUMP ordinary impeller",
+      "model": "4SDS5-600w",
+      "hp": "0.75HP",
+      "flow": "5.0m\u00b3/h",
+      "head": "55M",
+      "range": "0-45M",
+      "price": 20000
     },
     {
-      "name": "DC PUMP - Stainless Steel Impeller",
-      "products": [
-        {
-          "id": "dc-ss-600w",
-          "name": "4SDS5-600w SS (0.75HP)",
-          "price": "KSh 22,000",
-          "specs": {
-            "Power": "600W (0.75HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "55M",
-            "Water Depth": "0-45M",
-            "Ideal Power": "2 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "dc-ss-800w",
-          "name": "4SDS5-800w SS (1.0HP)",
-          "price": "KSh 29,000",
-          "specs": {
-            "Power": "800W (1.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "80M",
-            "Water Depth": "0-66M",
-            "Ideal Power": "2 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "dc-ss-1100w",
-          "name": "4SDS5-1100w SS (1.5HP)",
-          "price": "KSh 32,000",
-          "specs": {
-            "Power": "1100W (1.5HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "120M",
-            "Water Depth": "0-99M",
-            "Ideal Power": "3 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "dc-ss-1500w",
-          "name": "4SDS5-1500w SS (2.0HP)",
-          "price": "KSh 38,000",
-          "specs": {
-            "Power": "1500W (2.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "168M",
-            "Water Depth": "0-139M",
-            "Ideal Power": "4 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "dc-ss-2200w",
-          "name": "4SDS5-2200w SS (3.0HP)",
-          "price": "KSh 44,900",
-          "specs": {
-            "Power": "2200W (3.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "235M",
-            "Water Depth": "0-194M",
-            "Ideal Power": "6 x 550W",
-            "Outlet": "1.5\""
-          }
-        },
-        {
-          "id": "dc-ss-3000w",
-          "name": "4SDS5-3000w SS (4.0HP)",
-          "price": "KSh 53,000",
-          "specs": {
-            "Power": "3000W (4.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "285M",
-            "Water Depth": "0-235M",
-            "Ideal Power": "8 x 550W",
-            "Outlet": "1.5\""
-          }
-        }
-      ]
+      "id": 2,
+      "name": "DC PUMP ordinary impeller",
+      "model": "4SDS5-800w",
+      "hp": "1.0HP",
+      "flow": "5.0m\u00b3/h",
+      "head": "80M",
+      "range": "0-66M",
+      "price": 27000
     },
     {
-      "name": "AC/DC Hybrid PUMP - 4SDS5 Series",
-      "products": [
-        {
-          "id": "4sds5-600w",
-          "name": "4SDS5-600w (0.75HP)",
-          "price": "KSh 20,000",
-          "specs": {
-            "Power": "600W (0.75HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "55M",
-            "Water Depth": "0-45M",
-            "Ideal Power": "2 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "4sds5-800w",
-          "name": "4SDS5-800w (1.0HP)",
-          "price": "KSh 27,000",
-          "specs": {
-            "Power": "800W (1.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "80M",
-            "Water Depth": "0-66M",
-            "Ideal Power": "2 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "4sds5-1100w",
-          "name": "4SDS5-1100w (1.5HP)",
-          "price": "KSh 30,000",
-          "specs": {
-            "Power": "1100W (1.5HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "120M",
-            "Water Depth": "0-99M",
-            "Ideal Power": "3 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "4sds5-1500w",
-          "name": "4SDS5-1500w (2.0HP)",
-          "price": "KSh 36,000",
-          "specs": {
-            "Power": "1500W (2.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "168M",
-            "Water Depth": "0-139M",
-            "Ideal Power": "4 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "4sds5-2200w",
-          "name": "4SDS5-2200w (3.0HP)",
-          "price": "KSh 42,900",
-          "specs": {
-            "Power": "2200W (3.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "235M",
-            "Water Depth": "0-194M",
-            "Ideal Power": "6 x 550W",
-            "Outlet": "1.5\""
-          }
-        },
-        {
-          "id": "4sds5-3000w",
-          "name": "4SDS5-3000w (4.0HP)",
-          "price": "KSh 51,000",
-          "specs": {
-            "Power": "3000W (4.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "285M",
-            "Water Depth": "0-235M",
-            "Ideal Power": "8 x 550W",
-            "Outlet": "1.5\""
-          }
-        }
-      ]
+      "id": 3,
+      "name": "DC PUMP ordinary impeller",
+      "model": "4SDS5-1100w",
+      "hp": "1.5HP",
+      "flow": "5.0m\u00b3/h",
+      "head": "120M",
+      "range": "0-99M",
+      "price": 30000
     },
     {
-      "name": "AC/DC Hybrid PUMP - 4SDS7 Series",
-      "products": [
-        {
-          "id": "4sds7-600w",
-          "name": "4SDS7-600w (0.75HP)",
-          "price": "KSh 21,000",
-          "specs": {
-            "Power": "600W (0.75HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "55M",
-            "Water Depth": "0-45M",
-            "Ideal Power": "2 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "4sds7-800w",
-          "name": "4SDS7-800w (1.0HP)",
-          "price": "KSh 28,000",
-          "specs": {
-            "Power": "800W (1.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "80M",
-            "Water Depth": "0-66M",
-            "Ideal Power": "2 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "4sds7-1100w",
-          "name": "4SDS7-1100w (1.5HP)",
-          "price": "KSh 31,000",
-          "specs": {
-            "Power": "1100W (1.5HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "120M",
-            "Water Depth": "0-99M",
-            "Ideal Power": "3 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "4sds7-1500w",
-          "name": "4SDS7-1500w (2.0HP)",
-          "price": "KSh 37,000",
-          "specs": {
-            "Power": "1500W (2.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "168M",
-            "Water Depth": "0-139M",
-            "Ideal Power": "4 x 550W",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "4sds7-2200w",
-          "name": "4SDS7-2200w (3.0HP)",
-          "price": "KSh 43,900",
-          "specs": {
-            "Power": "2200W (3.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "235M",
-            "Water Depth": "0-194M",
-            "Ideal Power": "6 x 550W",
-            "Outlet": "1.5\""
-          }
-        }
-      ]
+      "id": 4,
+      "name": "DC PUMP ordinary impeller",
+      "model": "4SDS5-1500w",
+      "hp": "2.0HP",
+      "flow": "5.0m\u00b3/h",
+      "head": "168M",
+      "range": "0-139M",
+      "price": 36000
     },
     {
-      "name": "AC/DC Hybrid PUMP - 4SDS10 Series",
-      "products": [
-        {
-          "id": "4sds10-1500w",
-          "name": "4SDS10-1500w (2.0HP) AD",
-          "price": "KSh 48,000",
-          "specs": {
-            "Power": "1500W (2.0HP)",
-            "Flow Rate": "10.0m³/h",
-            "Max Head": "105M",
-            "Water Depth": "0-82M",
-            "Ideal Power": "4 x 550W",
-            "Outlet": "2\""
-          }
-        },
-        {
-          "id": "4sds10-2200w",
-          "name": "4SDS10-2200w (3.0HP) AD",
-          "price": "KSh 52,500",
-          "specs": {
-            "Power": "2200W (3.0HP)",
-            "Flow Rate": "10.0m³/h",
-            "Max Head": "155M",
-            "Water Depth": "0-122M",
-            "Ideal Power": "6 x 550W",
-            "Outlet": "2\""
-          }
-        },
-        {
-          "id": "4sds10-3000w",
-          "name": "4SDS10-3000w (4.0HP) AD",
-          "price": "KSh 57,000",
-          "specs": {
-            "Power": "3000W (4.0HP)",
-            "Flow Rate": "10.0m³/h",
-            "Max Head": "190M",
-            "Water Depth": "0-149M",
-            "Ideal Power": "8 x 550W",
-            "Outlet": "2\""
-          }
-        }
-      ]
+      "id": 5,
+      "name": "DC PUMP ordinary impeller",
+      "model": "4SDS5-2200w",
+      "hp": "3.0HP",
+      "flow": "5.0m\u00b3/h",
+      "head": "235M",
+      "range": "0-194M",
+      "price": 42900
     },
     {
-      "name": "AC/DC Hybrid PUMP - 4SF5 Series",
-      "products": [
-        {
-          "id": "4sf5-600w",
-          "name": "4SF5-600w (0.75HP)",
-          "price": "KSh 19,000",
-          "specs": {
-            "Power": "600W (0.75HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "55M",
-            "Water Depth": "0-45M",
-            "Ideal Power": "2 x 550W",
-            "Outlet": "1.5\""
-          }
-        },
-        {
-          "id": "4sf5-800w",
-          "name": "4SF5-800w (1.0HP)",
-          "price": "KSh 26,000",
-          "specs": {
-            "Power": "800W (1.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "80M",
-            "Water Depth": "0-66M",
-            "Ideal Power": "2 x 550W",
-            "Outlet": "1.5\""
-          }
-        },
-        {
-          "id": "4sf5-1100w",
-          "name": "4SF5-1100w (1.5HP)",
-          "price": "KSh 29,000",
-          "specs": {
-            "Power": "1100W (1.5HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "120M",
-            "Water Depth": "0-99M",
-            "Ideal Power": "3 x 550W",
-            "Outlet": "1.5\""
-          }
-        },
-        {
-          "id": "4sf5-1500w",
-          "name": "4SF5-1500w (2.0HP)",
-          "price": "KSh 35,000",
-          "specs": {
-            "Power": "1500W (2.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "168M",
-            "Water Depth": "0-139M",
-            "Ideal Power": "4 x 550W",
-            "Outlet": "1.5\""
-          }
-        },
-        {
-          "id": "4sf5-2200w",
-          "name": "4SF5-2200w (3.0HP)",
-          "price": "KSh 41,900",
-          "specs": {
-            "Power": "2200W (3.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "235M",
-            "Water Depth": "0-194M",
-            "Ideal Power": "6 x 550W",
-            "Outlet": "1.5\""
-          }
-        }
-      ]
+      "id": 6,
+      "name": "DC PUMP ordinary impeller",
+      "model": "4SDS5-3000w",
+      "hp": "4.0HP",
+      "flow": "5.0m\u00b3/h",
+      "head": "285M",
+      "range": "0-235M",
+      "price": 51000
     },
     {
-      "name": "AC/DC Hybrid PUMP - 4SF10 Series",
-      "products": [
-        {
-          "id": "4sf10-1500w",
-          "name": "4SF10-1500w (2.0HP)",
-          "price": "KSh 46,000",
-          "specs": {
-            "Power": "1500W (2.0HP)",
-            "Flow Rate": "10.0m³/h",
-            "Max Head": "105M",
-            "Water Depth": "0-82M",
-            "Ideal Power": "4 x 550W",
-            "Outlet": "2\""
-          }
-        },
-        {
-          "id": "4sf10-2200w",
-          "name": "4SF10-2200w (3.0HP)",
-          "price": "KSh 50,500",
-          "specs": {
-            "Power": "2200W (3.0HP)",
-            "Flow Rate": "10.0m³/h",
-            "Max Head": "155M",
-            "Water Depth": "0-122M",
-            "Ideal Power": "6 x 550W",
-            "Outlet": "2\""
-          }
-        },
-        {
-          "id": "4sf10-3000w",
-          "name": "4SF10-3000w (4.0HP)",
-          "price": "KSh 55,000",
-          "specs": {
-            "Power": "3000W (4.0HP)",
-            "Flow Rate": "10.0m³/h",
-            "Max Head": "190M",
-            "Water Depth": "0-149M",
-            "Ideal Power": "8 x 550W",
-            "Outlet": "2\""
-          }
-        }
-      ]
+      "id": 7,
+      "name": "DC PUMP stainless steel impeller",
+      "model": "4SPS4.5-600w",
+      "hp": "0.75HP",
+      "flow": "4.5m\u00b3/h",
+      "head": "70M",
+      "range": "0-55M",
+      "price": 31000
     },
     {
-      "name": "AC PUMP - Ordinary Impeller",
-      "products": [
-        {
-          "id": "ac-ordinary-600w",
-          "name": "AC Pump 600w (0.75HP)",
-          "price": "KSh 18,000",
-          "specs": {
-            "Power": "600W (0.75HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "55M",
-            "Water Depth": "0-45M",
-            "Voltage": "220V AC",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "ac-ordinary-800w",
-          "name": "AC Pump 800w (1.0HP)",
-          "price": "KSh 25,000",
-          "specs": {
-            "Power": "800W (1.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "80M",
-            "Water Depth": "0-66M",
-            "Voltage": "220V AC",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "ac-ordinary-1100w",
-          "name": "AC Pump 1100w (1.5HP)",
-          "price": "KSh 28,000",
-          "specs": {
-            "Power": "1100W (1.5HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "120M",
-            "Water Depth": "0-99M",
-            "Voltage": "220V AC",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "ac-ordinary-1500w",
-          "name": "AC Pump 1500w (2.0HP)",
-          "price": "KSh 34,000",
-          "specs": {
-            "Power": "1500W (2.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "168M",
-            "Water Depth": "0-139M",
-            "Voltage": "220V AC",
-            "Outlet": "1.25\""
-          }
-        },
-        {
-          "id": "ac-ordinary-2200w",
-          "name": "AC Pump 2200w (3.0HP)",
-          "price": "KSh 40,900",
-          "specs": {
-            "Power": "2200W (3.0HP)",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "235M",
-            "Water Depth": "0-194M",
-            "Voltage": "220V AC",
-            "Outlet": "1.5\""
-          }
-        }
-      ]
+      "id": 8,
+      "name": "DC PUMP stainless steel impeller",
+      "model": "4SPS4.5-800w",
+      "hp": "1.0HP",
+      "flow": "4.5m\u00b3/h",
+      "head": "98M",
+      "range": "0-76M",
+      "price": 37000
     },
     {
-      "name": "AC PUMP - 3 Phase",
-      "products": [
-        {
-          "id": "ac-3phase-2200w",
-          "name": "AC 3-Phase Pump 2200w (3.0HP)",
-          "price": "KSh 45,000",
-          "specs": {
-            "Power": "2200W (3.0HP)",
-            "Flow Rate": "10.0m³/h",
-            "Max Head": "155M",
-            "Water Depth": "0-122M",
-            "Voltage": "380V 3-Phase",
-            "Outlet": "1.5\""
-          }
-        },
-        {
-          "id": "ac-3phase-3000w",
-          "name": "AC 3-Phase Pump 3000w (4.0HP)",
-          "price": "KSh 52,000",
-          "specs": {
-            "Power": "3000W (4.0HP)",
-            "Flow Rate": "10.0m³/h",
-            "Max Head": "190M",
-            "Water Depth": "0-149M",
-            "Voltage": "380V 3-Phase",
-            "Outlet": "1.5\""
-          }
-        }
-      ]
+      "id": 9,
+      "name": "DC PUMP stainless steel impeller",
+      "model": "4SPS4.5-1100w",
+      "hp": "1.5HP",
+      "flow": "4.5m\u00b3/h",
+      "head": "140M",
+      "range": "0-109M",
+      "price": 40000
     },
     {
-      "name": "AC Booster PUMP",
-      "products": [
-        {
-          "id": "booster-qbm60",
-          "name": "QBM60 (0.5HP)",
-          "price": "KSh 2,500",
-          "specs": {
-            "Power": "0.5HP",
-            "Flow Rate": "2.2m³/h",
-            "Max Head": "35M",
-            "Water Depth": "0-21M",
-            "Voltage": "220V AC",
-            "Outlet": "1\""
-          }
-        },
-        {
-          "id": "booster-cpm158",
-          "name": "CPM 158/1 (1HP)",
-          "price": "KSh 9,000",
-          "specs": {
-            "Power": "1HP",
-            "Flow Rate": "5.4m³/h",
-            "Max Head": "36M",
-            "Water Depth": "0-34M",
-            "Voltage": "220V AC",
-            "Outlet": "1\""
-          }
-        },
-        {
-          "id": "booster-cpm190",
-          "name": "CPM 190/1 (2HP)",
-          "price": "KSh 16,500",
-          "specs": {
-            "Power": "2HP",
-            "Flow Rate": "8.4m³/h",
-            "Max Head": "40M",
-            "Water Depth": "0-39M",
-            "Voltage": "220V AC",
-            "Outlet": "1\""
-          }
-        }
-      ]
+      "id": 10,
+      "name": "DC PUMP stainless steel impeller",
+      "model": "4SPS4.5-1500w",
+      "hp": "2.0HP",
+      "flow": "4.5m\u00b3/h",
+      "head": "210M",
+      "range": "0-164M",
+      "price": 50000
     },
     {
-      "name": "AC Well PUMP",
-      "products": [
-        {
-          "id": "well-pump-1hp",
-          "name": "Well Pump 1HP",
-          "price": "KSh 12,000",
-          "specs": {
-            "Power": "1HP",
-            "Flow Rate": "5.0m³/h",
-            "Max Head": "50M",
-            "Water Depth": "0-40M",
-            "Voltage": "220V AC",
-            "Outlet": "1\""
-          }
-        },
-        {
-          "id": "well-pump-1.5hp",
-          "name": "Well Pump 1.5HP",
-          "price": "KSh 15,000",
-          "specs": {
-            "Power": "1.5HP",
-            "Flow Rate": "7.5m³/h",
-            "Max Head": "75M",
-            "Water Depth": "0-60M",
-            "Voltage": "220V AC",
-            "Outlet": "1\""
-          }
-        },
-        {
-          "id": "well-pump-2hp",
-          "name": "Well Pump 2HP",
-          "price": "KSh 18,000",
-          "specs": {
-            "Power": "2HP",
-            "Flow Rate": "10.0m³/h",
-            "Max Head": "100M",
-            "Water Depth": "0-80M",
-            "Voltage": "220V AC",
-            "Outlet": "1\""
-          }
-        }
-      ]
+      "id": 11,
+      "name": "DC PUMP stainless steel impeller",
+      "model": "4SPS4.5-2200w",
+      "hp": "3.0HP",
+      "flow": "4.5m\u00b3/h",
+      "head": "280M",
+      "range": "0-218M",
+      "price": 60000
     },
     {
-      "name": "Solar Panels",
-      "products": [
-        {
-          "id": "solar-50w",
-          "name": "50W Solar Panel",
-          "price": "KSh 3,500",
-          "specs": {
-            "Power": "50W",
-            "Voltage": "12V DC",
-            "Current": "2.78A",
-            "Efficiency": "18%"
-          }
-        },
-        {
-          "id": "solar-100w",
-          "name": "100W Solar Panel",
-          "price": "KSh 6,500",
-          "specs": {
-            "Power": "100W",
-            "Voltage": "12V DC",
-            "Current": "5.56A",
-            "Efficiency": "18%"
-          }
-        },
-        {
-          "id": "solar-200w",
-          "name": "200W Solar Panel",
-          "price": "KSh 12,000",
-          "specs": {
-            "Power": "200W",
-            "Voltage": "24V DC",
-            "Current": "8.33A",
-            "Efficiency": "18%"
-          }
-        }
-      ]
+      "id": 12,
+      "name": "AC/DC hybrid PUMP",
+      "model": "4SDS5-800w (AD)",
+      "hp": "1.0HP",
+      "flow": "5.0m\u00b3/h",
+      "head": "80M",
+      "range": "0-66M",
+      "price": 43000
     },
     {
-      "name": "Accessories",
-      "products": [
-        {
-          "id": "acc-check-valve",
-          "name": "Check Valve 1.25\"",
-          "price": "KSh 800",
-          "specs": {
-            "Size": "1.25 inch",
-            "Material": "Brass",
-            "Type": "Non-return valve"
-          }
-        },
-        {
-          "id": "acc-foot-valve",
-          "name": "Foot Valve 1.25\"",
-          "price": "KSh 1,200",
-          "specs": {
-            "Size": "1.25 inch",
-            "Material": "Stainless Steel",
-            "Type": "Suction foot valve"
-          }
-        },
-        {
-          "id": "acc-pressure-gauge",
-          "name": "Pressure Gauge 0-10 Bar",
-          "price": "KSh 2,500",
-          "specs": {
-            "Range": "0-10 Bar",
-            "Dial": "100mm",
-            "Connection": "1/4 inch"
-          }
-        },
-        {
-          "id": "acc-pressure-switch",
-          "name": "Pressure Switch",
-          "price": "KSh 3,500",
-          "specs": {
-            "Range": "0-10 Bar",
-            "Voltage": "220V AC",
-            "Amperage": "16A"
-          }
-        },
-        {
-          "id": "acc-delivery-hose",
-          "name": "Delivery Hose 1.25\" (50m)",
-          "price": "KSh 4,500",
-          "specs": {
-            "Size": "1.25 inch",
-            "Length": "50 meters",
-            "Material": "Reinforced PVC"
-          }
-        }
-      ]
+      "id": 13,
+      "name": "AC/DC hybrid PUMP",
+      "model": "4SDS5-1500w (AD)",
+      "hp": "2.0HP",
+      "flow": "5.0m\u00b3/h",
+      "head": "168M",
+      "range": "0-139M",
+      "price": 47000
+    },
+    {
+      "id": 14,
+      "name": "AC/DC hybrid PUMP",
+      "model": "4SDS5-2200w (AD)",
+      "hp": "3.0HP",
+      "flow": "5.0m\u00b3/h",
+      "head": "235M",
+      "range": "0-194M",
+      "price": 52000
+    },
+    {
+      "id": 15,
+      "name": "AC/DC hybrid PUMP",
+      "model": "4SDS5-3000w (AD)",
+      "hp": "4.0HP",
+      "flow": "5.0m\u00b3/h",
+      "head": "285M",
+      "range": "0-235M",
+      "price": 56500
+    },
+    {
+      "id": 16,
+      "name": "AC/DC hybrid PUMP",
+      "model": "4SDS7-800w (AD)",
+      "hp": "1.0HP",
+      "flow": "7.0m\u00b3/h",
+      "head": "60M",
+      "range": "0-52M",
+      "price": 42000
+    },
+    {
+      "id": 17,
+      "name": "AC/DC hybrid PUMP",
+      "model": "4SDS7-1100w (AD)",
+      "hp": "1.5HP",
+      "flow": "7.0m\u00b3/h",
+      "head": "95M",
+      "range": "0-83M",
+      "price": 45000
+    },
+    {
+      "id": 18,
+      "name": "AC/DC hybrid PUMP",
+      "model": "4SDS7-2200w (AD)",
+      "hp": "3.0HP",
+      "flow": "7.0m\u00b3/h",
+      "head": "185M",
+      "range": "0-161M",
+      "price": 54000
+    },
+    {
+      "id": 20,
+      "name": "AC/DC hybrid PUMP",
+      "model": "4SDS10-1500w (AD)",
+      "hp": "2.0HP",
+      "flow": "10.0m\u00b3/h",
+      "head": "105M",
+      "range": "0-82M",
+      "price": 48000
+    },
+    {
+      "id": 21,
+      "name": "AC/DC hybrid PUMP",
+      "model": "4SDS10-2200w (AD)",
+      "hp": "3.0HP",
+      "flow": "10.0m\u00b3/h",
+      "head": "155M",
+      "range": "0-122M",
+      "price": 52500
+    },
+    {
+      "id": 22,
+      "name": "AC/DC hybrid PUMP",
+      "model": "4SDS10-3000w (AD)",
+      "hp": "4.0HP",
+      "flow": "10.0m\u00b3/h",
+      "head": "190M",
+      "range": "0-149M",
+      "price": 57000
+    },
+    {
+      "id": 26,
+      "name": "AC/DC hybrid PUMP",
+      "model": "4SF10-120-4000w (AD)",
+      "hp": "5.5HP",
+      "flow": "14.4m\u00b3/h",
+      "head": "210M",
+      "range": "0-210M",
+      "price": 112000
+    },
+    {
+      "id": 27,
+      "name": "AC/DC hybrid PUMP",
+      "model": "4SF10-158-5500w (AD)",
+      "hp": "7.5HP",
+      "flow": "14.4m\u00b3/h",
+      "head": "272M",
+      "range": "0-265M",
+      "price": 137000
+    },
+    {
+      "id": 28,
+      "name": "AC/DC hybrid PUMP",
+      "model": "4SF10-196-7500w (AD)",
+      "hp": "10.0HP",
+      "flow": "14.4m\u00b3/h",
+      "head": "336M",
+      "range": "0-328M",
+      "price": 157000
+    },
+    {
+      "id": 29,
+      "name": "AC/DC hybrid PUMP",
+      "model": "4SF10-234-9200w (AD)",
+      "hp": "12.5HP",
+      "flow": "14.4m\u00b3/h",
+      "head": "400M",
+      "range": "0-386M",
+      "price": 182000
+    },
+    {
+      "id": 30,
+      "name": "AC PUMP ordinary impeller",
+      "model": "4SDM3/7",
+      "hp": "0.5HP",
+      "flow": "4.8m\u00b3/h",
+      "head": "50M",
+      "range": "0-47M",
+      "price": 13000
+    },
+    {
+      "id": 31,
+      "name": "AC PUMP ordinary impeller",
+      "model": "4SDM3/10",
+      "hp": "0.75HP",
+      "flow": "4.8m\u00b3/h",
+      "head": "72M",
+      "range": "0-68M",
+      "price": 14500
+    },
+    {
+      "id": 32,
+      "name": "AC PUMP ordinary impeller",
+      "model": "4SDM3/13",
+      "hp": "1.0HP",
+      "flow": "4.8m\u00b3/h",
+      "head": "93M",
+      "range": "0-88M",
+      "price": 17000
+    },
+    {
+      "id": 33,
+      "name": "AC PUMP ordinary impeller",
+      "model": "4SDM3/18",
+      "hp": "1.5HP",
+      "flow": "4.8m\u00b3/h",
+      "head": "122M",
+      "range": "0-115M",
+      "price": 21000
+    },
+    {
+      "id": 34,
+      "name": "AC PUMP ordinary impeller",
+      "model": "4SDM3/22",
+      "hp": "2.0HP",
+      "flow": "4.8m\u00b3/h",
+      "head": "158M",
+      "range": "0-149M",
+      "price": 25000
+    },
+    {
+      "id": 35,
+      "name": "AC PUMP ordinary impeller",
+      "model": "4SDM3/30",
+      "hp": "3.0HP",
+      "flow": "4.8m\u00b3/h",
+      "head": "215M",
+      "range": "0-203M",
+      "price": 33000
+    },
+    {
+      "id": 36,
+      "name": "AC PUMP ordinary impeller",
+      "model": "4SDM3/40",
+      "hp": "4.0HP",
+      "flow": "4.8m\u00b3/h",
+      "head": "287M",
+      "range": "0-271M",
+      "price": 42500
+    },
+    {
+      "id": 37,
+      "name": "AC PUMP ordinary impeller 3phase",
+      "model": "4SD3/30",
+      "hp": "3.0HP",
+      "flow": "4.8m\u00b3/h",
+      "head": "215M",
+      "range": "0-203M",
+      "price": 34000
+    },
+    {
+      "id": 38,
+      "name": "AC PUMP ordinary impeller 3phase",
+      "model": "4SD3/40",
+      "hp": "4.0HP",
+      "flow": "4.8m\u00b3/h",
+      "head": "287M",
+      "range": "0-271M",
+      "price": 45500
+    },
+    {
+      "id": 39,
+      "name": "AC booster PUMP",
+      "model": "QBM60",
+      "hp": "0.5HP",
+      "flow": "2.2m\u00b3/h",
+      "head": "35M",
+      "range": "0-21M",
+      "price": 2500
+    },
+    {
+      "id": 40,
+      "name": "AC booster PUMP",
+      "model": "CPM 158/1",
+      "hp": "1HP",
+      "flow": "5.4m\u00b3/h",
+      "head": "36M",
+      "range": "0-34M",
+      "price": 9000
+    },
+    {
+      "id": 41,
+      "name": "AC booster PUMP",
+      "model": "CPM 190/1",
+      "hp": "2HP",
+      "flow": "8.4m\u00b3/h",
+      "head": "40M",
+      "range": "0-39M",
+      "price": 16500
     }
   ]
 }
