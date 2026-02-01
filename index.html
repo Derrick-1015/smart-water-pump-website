@@ -557,7 +557,282 @@
             .products-grid {
                 grid-template-columns: 1fr;
             }
+
+        /* Customer Feedback Section */
+        .feedback-section {
+            padding: 4rem 0;
+            background-color: #ffffff;
+            border-top: 1px solid var(--border-color);
         }
+
+        .feedback-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .feedback-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .feedback-header h2 {
+            font-size: 2.5rem;
+            color: var(--slate-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .feedback-header p {
+            color: var(--slate-light);
+            font-size: 1.1rem;
+        }
+
+        .feedback-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .feedback-tab {
+            padding: 1rem 1.5rem;
+            border: none;
+            background-color: transparent;
+            color: var(--slate-light);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+            font-size: 1rem;
+        }
+
+        .feedback-tab:hover {
+            color: var(--primary-blue);
+        }
+
+        .feedback-tab.active {
+            color: var(--primary-blue);
+            border-bottom-color: var(--primary-blue);
+        }
+
+        .feedback-content {
+            display: none;
+        }
+
+        .feedback-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .testimonial-header {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            align-items: center;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-blue);
+        }
+
+        .testimonial-info h3 {
+            font-size: 1.1rem;
+            color: var(--slate-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-info p {
+            font-size: 0.9rem;
+            color: var(--slate-light);
+        }
+
+        .testimonial-rating {
+            color: #fbbf24;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            color: var(--slate-dark);
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .installation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .installation-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        .installation-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .installation-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            height: 200px;
+            background-color: #f3f4f6;
+        }
+
+        .installation-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .installation-info {
+            padding: 1.5rem;
+        }
+
+        .installation-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--slate-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .installation-location {
+            color: var(--slate-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .installation-description {
+            color: var(--slate-dark);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .installation-results {
+            background-color: var(--light-blue);
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--slate-dark);
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .video-card {
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .video-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-info {
+            padding: 1.5rem;
+            background: white;
+        }
+
+        .video-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--slate-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .video-description {
+            color: var(--slate-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .video-customer {
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: var(--slate-light);
+        }
+
+        .empty-state p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .feedback-tabs { gap: 0.5rem; }
+            .feedback-tab { padding: 0.75rem 1rem; font-size: 0.9rem; }
+            .testimonials-grid, .installation-grid, .videos-grid { grid-template-columns: 1fr; }
+            .installation-images { grid-template-columns: 1fr; height: 150px; }
+        }
+
     </style>
 </head>
 <body>
@@ -639,6 +914,48 @@
                 <p style="margin-top: 1.5rem;">
                     <a href="https://wa.me/254790002162?text=Hello%20Smart%20Water%20Pump%20KE" class="whatsapp-btn">Chat on WhatsApp</a>
                 </p>
+            </div>
+        </div>
+
+    <!-- Customer Feedback & Reviews Section -->
+    <section class="feedback-section" id="feedback">
+        <div class="feedback-container">
+            <div class="feedback-header">
+                <h2>Customer Feedback & Success Stories</h2>
+                <p>Real testimonials from satisfied customers and successful installations</p>
+            </div>
+
+            <div class="feedback-tabs">
+                <button class="feedback-tab active" onclick="switchFeedbackTab('testimonials')">💬 Testimonials</button>
+                <button class="feedback-tab" onclick="switchFeedbackTab('installations')">🏗️ Installations</button>
+                <button class="feedback-tab" onclick="switchFeedbackTab('videos')">🎥 Videos</button>
+            </div>
+
+            <!-- Testimonials Tab -->
+            <div id="testimonials" class="feedback-content active">
+                <div class="testimonials-grid" id="testimonials-container">
+                    <div class="empty-state">
+                        <p>📝 No testimonials yet. Check back soon!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installations Tab -->
+            <div id="installations" class="feedback-content">
+                <div class="installation-grid" id="installations-container">
+                    <div class="empty-state">
+                        <p>🏗️ No installation stories yet. Check back soon!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Videos Tab -->
+            <div id="videos" class="feedback-content">
+                <div class="videos-grid" id="videos-container">
+                    <div class="empty-state">
+                        <p>🎥 No videos yet. Check back soon!</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -866,5 +1183,134 @@
             initGallery();
         });
     </script>
+
+    <script>
+        // Feedback data storage
+        const feedbackData = {
+            testimonials: [],
+            installations: [],
+            videos: []
+        };
+
+        // Switch between feedback tabs
+        function switchFeedbackTab(tabName) {
+            // Hide all content
+            document.querySelectorAll('.feedback-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.feedback-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+
+        // Add testimonial
+        function addTestimonial(name, location, text, rating, avatarUrl) {
+            const testimonial = { name, location, text, rating, avatarUrl };
+            feedbackData.testimonials.push(testimonial);
+            renderTestimonials();
+        }
+
+        // Add installation story
+        function addInstallation(title, location, description, results, beforeImage, afterImage) {
+            const installation = { title, location, description, results, beforeImage, afterImage };
+            feedbackData.installations.push(installation);
+            renderInstallations();
+        }
+
+        // Add video
+        function addVideo(title, description, customer, videoUrl) {
+            const video = { title, description, customer, videoUrl };
+            feedbackData.videos.push(video);
+            renderVideos();
+        }
+
+        // Render testimonials
+        function renderTestimonials() {
+            const container = document.getElementById('testimonials-container');
+            if (feedbackData.testimonials.length === 0) {
+                container.innerHTML = '<div class="empty-state"><p>📝 No testimonials yet. Check back soon!</p></div>';
+                return;
+            }
+
+            container.innerHTML = feedbackData.testimonials.map(t => `
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="${t.avatarUrl}" alt="${t.name}" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h3>${t.name}</h3>
+                            <p>${t.location}</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">${'⭐'.repeat(t.rating)}</div>
+                    <p class="testimonial-text">"${t.text}"</p>
+                </div>
+            `).join('');
+        }
+
+        // Render installations
+        function renderInstallations() {
+            const container = document.getElementById('installations-container');
+            if (feedbackData.installations.length === 0) {
+                container.innerHTML = '<div class="empty-state"><p>🏗️ No installation stories yet. Check back soon!</p></div>';
+                return;
+            }
+
+            container.innerHTML = feedbackData.installations.map(i => `
+                <div class="installation-card">
+                    <div class="installation-images">
+                        <img src="${i.beforeImage}" alt="Before" class="installation-image">
+                        <img src="${i.afterImage}" alt="After" class="installation-image">
+                    </div>
+                    <div class="installation-info">
+                        <div class="installation-title">${i.title}</div>
+                        <div class="installation-location">📍 ${i.location}</div>
+                        <p class="installation-description">${i.description}</p>
+                        <div class="installation-results"><strong>Results:</strong> ${i.results}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Render videos
+        function renderVideos() {
+            const container = document.getElementById('videos-container');
+            if (feedbackData.videos.length === 0) {
+                container.innerHTML = '<div class="empty-state"><p>🎥 No videos yet. Check back soon!</p></div>';
+                return;
+            }
+
+            container.innerHTML = feedbackData.videos.map(v => `
+                <div class="video-card">
+                    <div class="video-container">
+                        <video autoplay muted loop playsinline>
+                            <source src="${v.videoUrl}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">${v.title}</div>
+                        <p class="video-description">${v.description}</p>
+                        <div class="video-customer">👤 ${v.customer}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTestimonials();
+            renderInstallations();
+            renderVideos();
+        });
+    </script>
+
 </body>
 </html>
