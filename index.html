@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Water Pump KE - Reliable Water Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #0066CC;
+            --dark-blue: #003D99;
+            --light-blue: #E6F0FF;
+            --slate-dark: #1F2937;
+            --slate-light: #6B7280;
+            --border-color: #E5E7EB;
+            --success-green: #10B981;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--slate-dark);
+            background-color: #FFFFFF;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--slate-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1EAD51;
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 51, 153, 0.8), rgba(0, 102, 204, 0.8)), url('./bg-pumps.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: var(--primary-blue);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--slate-dark);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--slate-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* Category Tabs */
+        .category-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .category-tab {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            background-color: white;
+            color: var(--slate-dark);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .category-tab:hover,
+        .category-tab.active {
+            background-color: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .product-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--slate-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .product-specs {
+            font-size: 0.9rem;
+            color: var(--slate-light);
+            margin-bottom: 1rem;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--light-blue);
+        }
+
+        .spec-label {
+            font-weight: 600;
+            color: var(--slate-dark);
+        }
+
+        .spec-value {
+            color: var(--slate-light);
+        }
+
+        .product-btn {
+            width: 100%;
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .product-btn:hover {
+            background-color: var(--dark-blue);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--light-blue);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--slate-dark);
+        }
+
+        .contact-details {
+            font-size: 1.1rem;
+            color: var(--slate-dark);
+            margin-bottom: 1rem;
+        }
+
+        .contact-details a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--slate-dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            z-index: 50;
+        }
+
+        .floating-whatsapp:hover {
+            background-color: #1EAD51;
+            transform: scale(1.1);
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 4rem 0;
+            background-color: #f9fafb;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-header h2 {
+            font-size: 2.5rem;
+            color: var(--slate-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-header p {
+            color: var(--slate-light);
+            font-size: 1.1rem;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            background-color: #1f2937;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            margin-bottom: 2rem;
+        }
+
+        .carousel-main {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: #111827;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .carousel-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .carousel-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #1f2937;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        .carousel-nav-btn:hover {
+            background-color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-nav-btn.prev {
+            left: 1rem;
+        }
+
+        .carousel-nav-btn.next {
+            right: 1rem;
+        }
+
+        .carousel-counter {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 10;
+        }
+
+        .carousel-thumbnails {
+            display: flex;
+            gap: 0.75rem;
+            overflow-x: auto;
+            padding: 1rem;
+            background-color: #f3f4f6;
+            scroll-behavior: smooth;
+        }
+
+        .carousel-thumbnails::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .carousel-thumbnails::-webkit-scrollbar-track {
+            background: #e5e7eb;
+            border-radius: 10px;
+        }
+
+        .carousel-thumbnails::-webkit-scrollbar-thumb {
+            background: #9ca3af;
+            border-radius: 10px;
+        }
+
+        .carousel-thumb {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .carousel-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-thumb.active {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+        }
+
+        .carousel-thumb:hover {
+            border-color: #9ca3af;
+        }
+
+        .gallery-controls {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .gallery-play-btn {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .gallery-play-btn:hover {
+            background-color: var(--dark-blue);
+        }
+
+        @media (max-width: 768px) {
+            .carousel-nav-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .carousel-nav-btn.prev {
+                left: 0.5rem;
+            }
+
+            .carousel-nav-btn.next {
+                right: 0.5rem;
+            }
+
+            .carousel-thumbnails {
+                gap: 0.5rem;
+                padding: 0.75rem;
+            }
+
+            .carousel-thumb {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            nav {
+                gap: 1rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-text">Smart Water Pump KE</div>
+            </div>
+            <nav>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact</a>
+                <a href="https://wa.me/254790002162?text=Hello%20Smart%20Water%20Pump%20KE" class="whatsapp-btn">💬 WhatsApp</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Smart Water Pump Solutions</h1>
+            <p>Reliable, efficient water pumping systems for homes and farms</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn-primary">View Products</a>
+                <a href="https://wa.me/254790002162?text=I%20am%20interested%20in%20your%20water%20pumps" class="btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="gallery-container">
+            <div class="gallery-header">
+                <h2>Our Work & Products</h2>
+                <p>Showcasing our quality installations and products</p>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="carousel-main">
+                    <img id="carousel-image" src="gallery/027f937951b9cf28c16bd5a7d91cf56c.jpg" alt="Gallery image">
+                    <div class="carousel-counter">
+                        <span id="carousel-current">1</span> / <span id="carousel-total">15</span>
+                    </div>
+                    <button class="carousel-nav-btn prev" onclick="previousImage()" aria-label="Previous image">❮</button>
+                    <button class="carousel-nav-btn next" onclick="nextImage()" aria-label="Next image">❯</button>
+                </div>
+
+                <div class="carousel-thumbnails" id="carousel-thumbnails"></div>
+            </div>
+
+            <div class="gallery-controls">
+                <button class="gallery-play-btn" id="play-btn" onclick="toggleAutoPlay()">▶ Play</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <p class="section-subtitle">Complete range of water pumps and solar panels for every need</p>
+
+            <div id="products-container">
+                <div style="text-align: center; padding: 2rem;">
+                    <p>Loading products...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <div class="contact-details">
+                <p><strong>Email:</strong> <a href="mailto:smartwaterpumpke@gmail.com">smartwaterpumpke@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+254790002162">+254 790 002 162</a></p>
+                <p><strong>Location:</strong> Nairobi, Kenya</p>
+                <p style="margin-top: 1.5rem;">
+                    <a href="https://wa.me/254790002162?text=Hello%20Smart%20Water%20Pump%20KE" class="whatsapp-btn">Chat on WhatsApp</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Smart Water Pump KE. All rights reserved. | 1-Year Warranty | Same-Day Delivery</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/254790002162?text=Hello%20Smart%20Water%20Pump%20KE" class="floating-whatsapp" title="Chat with us on WhatsApp">💬</a>
+
+    <script>
+        // Load products from JSON
+        fetch('products.json?v=' + new Date().getTime())
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('products-container');
+                container.innerHTML = '';
+
+                // Create category tabs
+                const tabsContainer = document.createElement('div');
+                tabsContainer.className = 'category-tabs';
+
+                data.categories.forEach((category, index) => {
+                    const tab = document.createElement('button');
+                    tab.className = 'category-tab' + (index === 0 ? ' active' : '');
+                    tab.textContent = category.name;
+                    tab.onclick = () => displayCategory(category, data.categories);
+                    tabsContainer.appendChild(tab);
+                });
+
+                container.appendChild(tabsContainer);
+
+                // Display first category
+                const productsGrid = document.createElement('div');
+                productsGrid.className = 'products-grid';
+                productsGrid.id = 'products-grid';
+                container.appendChild(productsGrid);
+
+                displayCategory(data.categories[0], data.categories);
+            })
+            .catch(error => console.error('Error loading products:', error));
+
+        function displayCategory(category, allCategories) {
+            const grid = document.getElementById('products-grid');
+            grid.innerHTML = '';
+
+            category.products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+
+                let specsHTML = '';
+                for (const [key, value] of Object.entries(product.specs)) {
+                    const label = key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1');
+                    specsHTML += `<div class="spec-item"><span class="spec-label">${label}:</span><span class="spec-value">${value}</span></div>`;
+                }
+
+                card.innerHTML = `
+                    <div class="product-name">${product.name}</div>
+                    <div class="product-price">KSh ${product.price.toLocaleString()}</div>
+                    <div class="product-specs">${specsHTML}</div>
+                    <a href="https://wa.me/254790002162?text=I%20am%20interested%20in%20${encodeURIComponent(product.name)}" class="product-btn">Inquire on WhatsApp</a>
+                `;
+
+                grid.appendChild(card);
+            });
+
+            // Update active tab
+            document.querySelectorAll('.category-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Gallery Carousel Functionality
+        const galleryImages = [
+            'gallery/027f937951b9cf28c16bd5a7d91cf56c.jpg',
+            'gallery/0fa37329c782ddd63bb2baec5a4a0e31.jpg',
+            'gallery/258f3f8784fe74aa52daea40e79727ce.jpg',
+            'gallery/2d93b4cf189a8edc4e4993791a2f6f26.jpg',
+            'gallery/33804fdf00007f7bdaf8682a64e66ca2.jpg',
+            'gallery/4418328e75cf40c526e124131f270fc4.jpg',
+            'gallery/4babab8fbde102e582ad8cd93e0f4c11.jpg',
+            'gallery/4cbcdc06124420b6f436d5f1f97c12b5.jpg',
+            'gallery/4dd1201f1292c66c98b3d9421f6119ee.jpg',
+            'gallery/5595990f98a4b36f2ccef7b60f71cfa6.jpg',
+            'gallery/9240d70fba9b483293b3cadc8de33ec8.jpg',
+            'gallery/9c919aee8a6eba8d868d1a815ff4ec35.jpg',
+            'gallery/IMG-20251210-WA0012.jpg',
+            'gallery/IMG-20251211-WA0012.jpg',
+            'gallery/IMG-20251213-WA0010.jpg',
+            'gallery/IMG-20251213-WA0011.jpg',
+            'gallery/IMG-20251213-WA0013.jpg',
+            'gallery/IMG-20251214-WA0002.jpg',
+            'gallery/IMG-20251214-WA0003.jpg',
+            'gallery/IMG-20251214-WA0004.jpg',
+            'gallery/IMG-20251214-WA0006.jpg',
+            'gallery/IMG-20251214-WA0007.jpg',
+            'gallery/IMG-20251217-WA0029.jpg',
+            'gallery/IMG-20251219-WA0018(1).jpg',
+            'gallery/IMG-20251219-WA0018.jpg',
+            'gallery/IMG-20251219-WA0019.jpg',
+            'gallery/IMG-20251219-WA0020.jpg',
+            'gallery/IMG-20251227-WA0006.jpg',
+            'gallery/IMG-20260109-WA0003(1).jpg',
+            'gallery/IMG-20260109-WA0003.jpg',
+            'gallery/IMG-20260109-WA0006.jpg',
+            'gallery/IMG-20260110-WA0003.jpg',
+            'gallery/IMG-20260121-WA0002.jpg',
+            'gallery/IMG-20260128-WA0003.jpg',
+            'gallery/af88c5efba455b92c117c38f000b5539.jpg',
+            'gallery/b3533670f1f9be7c2e329bf25d5d74b7.jpg',
+            'gallery/c8365cdc28141c09368766d221ed6b81.jpg',
+            'gallery/dc5dbbbdec1f0fd2ec60e11503e8b31d.jpg',
+            'gallery/dd759020cee50bf69befbd7a7bcb7e3a.jpg',
+            'gallery/de95fd066139f7ca48e0184bb5f6aa71.jpg',
+            'gallery/e5f41d7a86d13f0cd35c69ec9e78ae95.jpg',
+            'gallery/e912d7bb93ac87c9e81c07265ea0025d.jpg',
+            'gallery/f279e1194f90f8961734873cebd21876.jpg',
+            'gallery/f3b0fe70dd65afc5c3f3108f80fd89c8.jpg',
+            'gallery/f4c4199e1d90440b16f2008d9710e1cd.jpg',
+            'gallery/f56f23f7d84459bfa222773d44110211.jpg',
+        ];
+
+        let currentImageIndex = 0;
+        let autoPlayInterval = null;
+
+        function initGallery() {
+            const thumbnailsContainer = document.getElementById('carousel-thumbnails');
+            galleryImages.forEach((img, index) => {
+                const thumb = document.createElement('div');
+                thumb.className = 'carousel-thumb' + (index === 0 ? ' active' : '');
+                thumb.innerHTML = '<img src="' + img + '" alt="Thumbnail ' + (index + 1) + '">';
+                thumb.onclick = () => goToImage(index);
+                thumbnailsContainer.appendChild(thumb);
+            });
+            document.getElementById('carousel-total').textContent = galleryImages.length;
+        }
+
+        function updateCarousel() {
+            document.getElementById('carousel-image').src = galleryImages[currentImageIndex];
+            document.getElementById('carousel-current').textContent = currentImageIndex + 1;
+            
+            document.querySelectorAll('.carousel-thumb').forEach((thumb, index) => {
+                if (index === currentImageIndex) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            updateCarousel();
+            resetAutoPlay();
+        }
+
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateCarousel();
+            resetAutoPlay();
+        }
+
+        function goToImage(index) {
+            currentImageIndex = index;
+            updateCarousel();
+            resetAutoPlay();
+        }
+
+        function toggleAutoPlay() {
+            const btn = document.getElementById('play-btn');
+            if (autoPlayInterval) {
+                clearInterval(autoPlayInterval);
+                autoPlayInterval = null;
+                btn.textContent = '▶ Play';
+            } else {
+                autoPlayInterval = setInterval(() => {
+                    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+                    updateCarousel();
+                }, 5000);
+                btn.textContent = '⏸ Pause';
+            }
+        }
+
+        function resetAutoPlay() {
+            if (autoPlayInterval) {
+                clearInterval(autoPlayInterval);
+                autoPlayInterval = setInterval(() => {
+                    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+                    updateCarousel();
+                }, 5000);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initGallery();
+        });
+    </script>
+</body>
+</html>
