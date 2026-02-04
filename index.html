@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Smart Water Pump KE - Reliable, efficient water pumping systems for homes and farms">
+    <meta name="theme-color" content="#0066CC">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <title>Smart Water Pump KE - Reliable Water Solutions</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <style>
         * {
             margin: 0;
@@ -1273,7 +1279,9 @@
             galleryImages.forEach((image, index) => {
                 const thumb = document.createElement('div');
                 thumb.className = 'carousel-thumb' + (index === 0 ? ' active' : '');
-                thumb.innerHTML = `<img src="${image}" alt="Thumbnail ${index + 1}">`;
+                // Use loading="lazy" for thumbnails and preload first few
+                const loadingAttr = index < 5 ? 'eager' : 'lazy';
+                thumb.innerHTML = `<img src="${image}" alt="Thumbnail ${index + 1}" loading="${loadingAttr}" decoding="async">`;
                 thumb.onclick = () => goToImage(index);
                 container.appendChild(thumb);
             });
@@ -1281,7 +1289,15 @@
 
         function updateCarousel() {
             const img = document.getElementById('carousel-image');
+            // Preload current and next images for smooth transitions
             img.src = galleryImages[currentImageIndex];
+            img.decoding = 'async';
+            
+            // Preload next image
+            const nextIndex = (currentImageIndex + 1) % galleryImages.length;
+            const nextImg = new Image();
+            nextImg.src = galleryImages[nextIndex];
+            
             document.getElementById('current-image').textContent = currentImageIndex + 1;
 
             // Update thumbnails
@@ -1428,7 +1444,7 @@
             container.innerHTML = feedbackData.videos.map(v => `
                 <div class="video-card">
                     <div class="video-container">
-                        <video autoplay muted loop playsinline>
+                        <video autoplay muted loop playsinline preload="metadata">
                             <source src="${v.videoUrl}" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -1440,6 +1456,29 @@
                     </div>
                 </div>
             `).join('');
+            
+            // Implement Intersection Observer for lazy loading videos
+            const videos = container.querySelectorAll('video');
+            if ('IntersectionObserver' in window) {
+                const videoObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const video = entry.target;
+                            if (video.paused) {
+                                video.play().catch(() => {});
+                            }
+                            observer.unobserve(video);
+                        } else {
+                            const video = entry.target;
+                            if (!video.paused) {
+                                video.pause();
+                            }
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                videos.forEach(video => videoObserver.observe(video));
+            }
         }
 
         // Initialize on page load
@@ -1455,7 +1494,7 @@
             // Add installation videos
             addVideo('HYBRID AC/DC 3KW Installation in Taveta', 'Professional installation of hybrid AC/DC 3KW water pump system in Taveta', 'Smart Water Pump KE', './videos/installation-02.mp4');
             addVideo('Hybrid AC/DC 3KW Installation in Kilifi', 'Complete installation process of hybrid AC/DC 3KW pump system in Kilifi', 'Smart Water Pump KE', './videos/installation-03.mp4');
-            addVideo('DC Pump Installation in Eldoret', 'Professional DC pump installation with complete setup and testing in Eldoret', 'Smart Water Pump KE', './videos/installation-04.mp4');
+            addVideo('DC Pump Installation in Eldoret', 'Professional DC pump installation with complete setup and testing in Eldoret', 'Smart Water Pump KE', './videos/installation-03.mp4');
             
             renderTestimonials();
             renderInstallations();
