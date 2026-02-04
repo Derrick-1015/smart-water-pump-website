@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Water Pump KE - Reliable Water Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -96,39 +97,69 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 51, 153, 0.7), rgba(0, 102, 204, 0.7)), url('./hero-bg.jpg');
+            background: linear-gradient(135deg, rgba(0, 51, 153, 0.8) 0%, rgba(0, 102, 204, 0.8) 100%), url('./hero-bg.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             color: white;
-            padding: 6rem 2rem;
+            padding: 8rem 2rem;
             text-align: center;
-            min-height: 500px;
+            min-height: 600px;
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
 
         .hero-container {
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
-            font-weight: 700;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
             opacity: 0.95;
+            font-weight: 300;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -136,18 +167,20 @@
         .btn-primary {
             background-color: white;
             color: var(--primary-blue);
-            padding: 1rem 2rem;
-            border-radius: 8px;
+            padding: 1.1rem 2.5rem;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.2s, box-shadow 0.2s;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border: none;
             cursor: pointer;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            letter-spacing: 0.5px;
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
         }
 
         /* Main Container */
@@ -167,6 +200,7 @@
             color: var(--slate-dark);
             margin-bottom: 1rem;
             text-align: center;
+            font-weight: 800;
         }
 
         .section-subtitle {
@@ -311,12 +345,60 @@
             font-weight: 600;
         }
 
+        /* Social Media Icons */
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 2px solid transparent;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary-blue);
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 102, 204, 0.3);
+        }
+
+        .social-icon.whatsapp:hover {
+            background-color: #25D366;
+        }
+
+        .social-icon.facebook:hover {
+            background-color: #1877F2;
+        }
+
+        .social-icon.tiktok:hover {
+            background-color: #000000;
+        }
+
         /* Footer */
         footer {
             background-color: var(--slate-dark);
             color: white;
-            padding: 2rem;
+            padding: 3rem 2rem;
             text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 1.5rem;
         }
 
         /* Floating WhatsApp Button */
@@ -376,29 +458,33 @@
 
         .carousel-wrapper {
             position: relative;
-            background-color: #1f2937;
-            border-radius: 12px;
+            background-color: white;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
         .carousel-main {
             position: relative;
             width: 100%;
-            aspect-ratio: 16 / 9;
-            background-color: #111827;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding-bottom: 66.67%;
+            background-color: #f3f4f6;
             overflow: hidden;
         }
 
-        .carousel-main img {
+        .carousel-image {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            opacity: 0;
             transition: opacity 0.3s ease-in-out;
+        }
+
+        .carousel-image.active {
+            opacity: 1;
         }
 
         .carousel-nav-btn {
@@ -557,11 +643,12 @@
             .products-grid {
                 grid-template-columns: 1fr;
             }
+        }
 
         /* Customer Feedback Section */
         .feedback-section {
             padding: 4rem 0;
-            background-color: #ffffff;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
             border-top: 1px solid var(--border-color);
         }
 
@@ -580,6 +667,7 @@
             font-size: 2.5rem;
             color: var(--slate-dark);
             margin-bottom: 0.5rem;
+            font-weight: 800;
         }
 
         .feedback-header p {
@@ -633,7 +721,7 @@
 
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2rem;
         }
 
@@ -641,14 +729,33 @@
             background: white;
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 2rem;
+            padding: 1.5rem;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .testimonial-card:hover::before {
+            left: 100%;
         }
 
         .testimonial-card:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 8px 24px rgba(0, 102, 204, 0.15);
             transform: translateY(-4px);
+            border-color: var(--primary-blue);
         }
 
         .testimonial-header {
@@ -659,18 +766,19 @@
         }
 
         .testimonial-avatar {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--primary-blue);
+            flex-shrink: 0;
         }
 
         .testimonial-info h3 {
             font-size: 0.95rem;
             color: var(--slate-dark);
             margin-bottom: 0.15rem;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: 0.3px;
         }
 
@@ -682,14 +790,16 @@
 
         .testimonial-rating {
             color: #fbbf24;
-            font-size: 1rem;
-            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: 2px;
         }
 
         .testimonial-text {
             color: var(--slate-dark);
             font-style: italic;
             line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         .installation-grid {
@@ -705,11 +815,13 @@
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
             transition: all 0.3s;
+            cursor: pointer;
         }
 
         .installation-card:hover {
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
             transform: translateY(-4px);
+            border-color: var(--primary-blue);
         }
 
         .installation-images {
@@ -770,6 +882,7 @@
             overflow: hidden;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
         }
 
         .video-card:hover {
@@ -837,6 +950,21 @@
             .feedback-tab { padding: 0.75rem 1rem; font-size: 0.9rem; }
             .testimonials-grid, .installation-grid, .videos-grid { grid-template-columns: 1fr; }
             .installation-images { grid-template-columns: 1fr; height: 150px; }
+            .hero {
+                padding: 4rem 1rem;
+                min-height: 400px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .social-icons {
+                gap: 1rem;
+            }
+            .social-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
         }
 
     </style>
@@ -869,7 +997,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="gallery-section" id="gallery">
+    <section class="gallery-section">
         <div class="gallery-container">
             <div class="gallery-header">
                 <h2>Our Work & Products</h2>
@@ -878,12 +1006,10 @@
 
             <div class="carousel-wrapper">
                 <div class="carousel-main">
-                    <img id="carousel-image" src="./gallery/product_01.jpg" alt="Gallery image">
-                    <div class="carousel-counter">
-                        <span id="carousel-current">1</span> / <span id="carousel-total">46</span>
-                    </div>
-                    <button class="carousel-nav-btn prev" onclick="previousImage()" aria-label="Previous image">❮</button>
-                    <button class="carousel-nav-btn next" onclick="nextImage()" aria-label="Next image">❯</button>
+                    <img id="carousel-image" src="./gallery/product_01.jpg" alt="Gallery Image" class="carousel-image active">
+                    <button class="carousel-nav-btn prev" onclick="prevImage()">❮</button>
+                    <button class="carousel-nav-btn next" onclick="nextImage()">❯</button>
+                    <div class="carousel-counter"><span id="current-image">1</span> / <span id="total-images">46</span></div>
                 </div>
 
                 <div class="carousel-thumbnails" id="carousel-thumbnails"></div>
@@ -900,12 +1026,7 @@
         <div class="container">
             <h2 class="section-title">Our Products</h2>
             <p class="section-subtitle">Complete range of water pumps and solar panels for every need</p>
-
-            <div id="products-container">
-                <div style="text-align: center; padding: 2rem;">
-                    <p>Loading products...</p>
-                </div>
-            </div>
+            <div id="products-container"></div>
         </div>
     </section>
 
@@ -917,11 +1038,23 @@
                 <p><strong>Email:</strong> <a href="mailto:smartwaterpumpke@gmail.com">smartwaterpumpke@gmail.com</a></p>
                 <p><strong>Phone:</strong> <a href="tel:+254790002162">+254 790 002 162</a></p>
                 <p><strong>Location:</strong> Nairobi, Kenya</p>
-                <p style="margin-top: 1.5rem;">
-                    <a href="https://wa.me/254790002162?text=Hello%20Smart%20Water%20Pump%20KE" class="whatsapp-btn">Chat on WhatsApp</a>
-                </p>
+            </div>
+            <a href="https://wa.me/254790002162?text=Hello%20Smart%20Water%20Pump%20KE" class="btn-primary">Chat on WhatsApp</a>
+            
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://wa.me/254790002162" class="social-icon whatsapp" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com/share/17ys1Up46B/" class="social-icon facebook" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.tiktok.com/@doyin.pump.kenya5?_r=1&_t=ZS-93dVTOFBCZI" class="social-icon tiktok" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
             </div>
         </div>
+    </section>
 
     <!-- Customer Feedback & Reviews Section -->
     <section class="feedback-section" id="feedback">
@@ -969,6 +1102,17 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Smart Water Pump KE. All rights reserved. | 1-Year Warranty | Same-Day Delivery</p>
+        <div class="social-icons">
+            <a href="https://wa.me/254790002162" class="social-icon whatsapp" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/share/17ys1Up46B/" class="social-icon facebook" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@doyin.pump.kenya5?_r=1&_t=ZS-93dVTOFBCZI" class="social-icon tiktok" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
@@ -1110,54 +1254,61 @@
             './gallery/product_43.jpg',
             './gallery/product_44.jpg',
             './gallery/product_45.jpg',
-            './gallery/product_46.jpg',
+            './gallery/product_46.jpg'
         ];
 
         let currentImageIndex = 0;
-        let autoPlayInterval = null;
+        let autoPlayInterval;
 
-        function initGallery() {
-            const thumbnailsContainer = document.getElementById('carousel-thumbnails');
-            galleryImages.forEach((img, index) => {
-                const thumb = document.createElement('div');
-                thumb.className = 'carousel-thumb' + (index === 0 ? ' active' : '');
-                thumb.innerHTML = '<img src="' + img + '" alt="Thumbnail ' + (index + 1) + '">';
-                thumb.onclick = () => goToImage(index);
-                thumbnailsContainer.appendChild(thumb);
-            });
-            document.getElementById('carousel-total').textContent = galleryImages.length;
+        function initCarousel() {
+            document.getElementById('total-images').textContent = galleryImages.length;
+            loadThumbnails();
             updateCarousel();
         }
 
-        function updateCarousel() {
-            document.getElementById('carousel-image').src = galleryImages[currentImageIndex];
-            document.getElementById('carousel-current').textContent = currentImageIndex + 1;
-            
-            document.querySelectorAll('.carousel-thumb').forEach((thumb, index) => {
-                if (index === currentImageIndex) {
-                    thumb.classList.add('active');
-                } else {
-                    thumb.classList.remove('active');
-                }
+        function loadThumbnails() {
+            const container = document.getElementById('carousel-thumbnails');
+            container.innerHTML = '';
+
+            galleryImages.forEach((image, index) => {
+                const thumb = document.createElement('div');
+                thumb.className = 'carousel-thumb' + (index === 0 ? ' active' : '');
+                thumb.innerHTML = `<img src="${image}" alt="Thumbnail ${index + 1}">`;
+                thumb.onclick = () => goToImage(index);
+                container.appendChild(thumb);
             });
+        }
+
+        function updateCarousel() {
+            const img = document.getElementById('carousel-image');
+            img.src = galleryImages[currentImageIndex];
+            document.getElementById('current-image').textContent = currentImageIndex + 1;
+
+            // Update thumbnails
+            document.querySelectorAll('.carousel-thumb').forEach((thumb, index) => {
+                thumb.classList.toggle('active', index === currentImageIndex);
+            });
+
+            // Scroll thumbnail into view
+            const activeThumb = document.querySelectorAll('.carousel-thumb')[currentImageIndex];
+            if (activeThumb) {
+                activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
         }
 
         function nextImage() {
             currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
             updateCarousel();
-            resetAutoPlay();
         }
 
-        function previousImage() {
+        function prevImage() {
             currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
             updateCarousel();
-            resetAutoPlay();
         }
 
         function goToImage(index) {
             currentImageIndex = index;
             updateCarousel();
-            resetAutoPlay();
         }
 
         function toggleAutoPlay() {
@@ -1167,31 +1318,12 @@
                 autoPlayInterval = null;
                 btn.textContent = '▶ Play';
             } else {
-                autoPlayInterval = setInterval(() => {
-                    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-                    updateCarousel();
-                }, 5000);
+                autoPlayInterval = setInterval(nextImage, 3000);
                 btn.textContent = '⏸ Pause';
             }
         }
 
-        function resetAutoPlay() {
-            if (autoPlayInterval) {
-                clearInterval(autoPlayInterval);
-                autoPlayInterval = setInterval(() => {
-                    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-                    updateCarousel();
-                }, 5000);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            initGallery();
-        });
-    </script>
-
-    <script>
-        // Feedback data storage
+        // Feedback Data
         const feedbackData = {
             testimonials: [],
             installations: [],
@@ -1312,13 +1444,14 @@
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
+            initCarousel();
+
             // Add outstanding testimonials
             addTestimonial('James Kipchoge', 'Kiambu County', 'Exceptional service! The Smart Water Pump system transformed our farm. Water flow increased by 300% and we\'ve cut electricity costs by 80%. The installation team was professional and completed everything in just one day. Highly recommended!', 5, 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%230066CC%22/%3E%3Ctext x=%2250%22 y=%2260%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22white%22%3EJK%3C/text%3E%3C/svg%3E');
             addTestimonial('Margaret Ochieng', 'Nairobi', 'The best investment for our household! We now have reliable water supply 24/7. The team explained everything clearly and the maintenance is so easy. Customer service is outstanding - they respond to calls immediately!', 5, 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%2210B981%22/%3E%3Ctext x=%2250%22 y=%2260%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22white%22%3EMO%3C/text%3E%3C/svg%3E');
             addTestimonial('David Mwangi', 'Mombasa', 'Outstanding quality and durability! Our pump has been running non-stop for 8 months without any issues. The warranty coverage is comprehensive and the spare parts are affordable. This is real value for money!', 5, 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23F59E0B%22/%3E%3Ctext x=%2250%22 y=%2260%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22white%22%3EDM%3C/text%3E%3C/svg%3E');
             addTestimonial('Grace Wanjiru', 'Eldoret', 'Perfect solution for our irrigation needs! The solar-powered system is eco-friendly and cost-effective. Installation was quick and the team provided excellent training on operation and maintenance. Five stars!', 5, 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23EC4899%22/%3E%3Ctext x=%2250%22 y=%2260%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22white%22%3EGW%3C/text%3E%3C/svg%3E');
 
-            
             // Add installation videos
             addVideo('Water Pump Installation - Demo 1', 'Professional installation of submersible water pump system with solar integration', 'Smart Water Pump KE', './videos/installation-01.mp4');
             addVideo('Water Pump Installation - Demo 2', 'Complete installation process showing setup and testing of pump system', 'Smart Water Pump KE', './videos/installation-02.mp4');
