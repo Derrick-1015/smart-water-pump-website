@@ -1,0 +1,642 @@
+{
+  "categories": [
+    {
+      "name": "DC PUMP - Ordinary Impeller",
+      "products": [
+        {
+          "id": "dc-ordinary-600w",
+          "name": "4SDS5-600w (0.75HP)",
+          "price": "20,000",
+          "specs": {
+            "Power": "600W (0.75HP)",
+            "Flow Rate": "5.0m³/h",
+            "Max Head": "55M",
+            "Water Depth": "0-45M",
+            "Outlet": "1.25\""
+          }
+        },
+        {
+          "id": "dc-ordinary-800w",
+          "name": "4SDS5-800w (1.0HP)",
+          "price": "27,000",
+          "specs": {
+            "Power": "800W (1.0HP)",
+            "Flow Rate": "5.0m³/h",
+            "Max Head": "80M",
+            "Water Depth": "0-66M",
+            "Outlet": "1.25\""
+          }
+        },
+        {
+          "id": "dc-ordinary-1100w",
+          "name": "4SDS5-1100w (1.5HP)",
+          "price": "30,000",
+          "specs": {
+            "Power": "1100W (1.5HP)",
+            "Flow Rate": "5.0m³/h",
+            "Max Head": "120M",
+            "Water Depth": "0-99M",
+            "Outlet": "1.25\""
+          }
+        },
+        {
+          "id": "dc-ordinary-1500w",
+          "name": "4SDS5-1500w (2.0HP)",
+          "price": "36,000",
+          "specs": {
+            "Power": "1500W (2.0HP)",
+            "Flow Rate": "5.0m³/h",
+            "Max Head": "168M",
+            "Water Depth": "0-139M",
+            "Outlet": "1.25\""
+          }
+        },
+        {
+          "id": "dc-ordinary-2200w",
+          "name": "4SDS5-2200w (3.0HP)",
+          "price": "42,900",
+          "specs": {
+            "Power": "2200W (3.0HP)",
+            "Flow Rate": "5.0m³/h",
+            "Max Head": "235M",
+            "Water Depth": "0-194M",
+            "Outlet": "1.5\""
+          }
+        },
+        {
+          "id": "dc-ordinary-3000w",
+          "name": "4SDS5-3000w (4.0HP)",
+          "price": "51,000",
+          "specs": {
+            "Power": "3000W (4.0HP)",
+            "Flow Rate": "5.0m³/h",
+            "Max Head": "285M",
+            "Water Depth": "0-235M",
+            "Outlet": "1.5\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "DC PUMP - Stainless Steel Impeller",
+      "products": [
+        {
+          "id": "dc-ss-600w",
+          "name": "4SPS4.5-600w (0.75HP)",
+          "price": "31,000",
+          "specs": {
+            "Power": "600W (0.75HP)",
+            "Flow Rate": "4.5m³/h",
+            "Max Head": "70M",
+            "Water Depth": "0-55M",
+            "Outlet": "1.25\""
+          }
+        },
+        {
+          "id": "dc-ss-800w",
+          "name": "4SPS4.5-800w (1.0HP)",
+          "price": "37,000",
+          "specs": {
+            "Power": "800W (1.0HP)",
+            "Flow Rate": "4.5m³/h",
+            "Max Head": "98M",
+            "Water Depth": "0-76M",
+            "Outlet": "1.25\""
+          }
+        },
+        {
+          "id": "dc-ss-1100w",
+          "name": "4SPS4.5-1100w (1.5HP)",
+          "price": "40,000",
+          "specs": {
+            "Power": "1100W (1.5HP)",
+            "Flow Rate": "4.5m³/h",
+            "Max Head": "140M",
+            "Water Depth": "0-109M",
+            "Outlet": "1.25\""
+          }
+        },
+        {
+          "id": "dc-ss-1500w",
+          "name": "4SPS4.5-1500w (2.0HP)",
+          "price": "50,000",
+          "specs": {
+            "Power": "1500W (2.0HP)",
+            "Flow Rate": "4.5m³/h",
+            "Max Head": "210M",
+            "Water Depth": "0-164M",
+            "Outlet": "1.5\""
+          }
+        },
+        {
+          "id": "dc-ss-2200w",
+          "name": "4SPS4.5-2200w (3.0HP)",
+          "price": "60,000",
+          "specs": {
+            "Power": "2200W (3.0HP)",
+            "Flow Rate": "4.5m³/h",
+            "Max Head": "280M",
+            "Water Depth": "0-218M",
+            "Outlet": "1.5\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "AC/DC Hybrid PUMP - 4SDS5 Series",
+      "products": [
+        {
+          "id": "4sds5-800w",
+          "name": "4SDS5-800w (1.0HP) AD",
+          "price": "43,000",
+          "specs": {
+            "Power": "800W (1.0HP)",
+            "Flow Rate": "5.0m³/h",
+            "Max Head": "80M",
+            "Water Depth": "0-66M",
+            "Outlet": "1.25\""
+          }
+        },
+        {
+          "id": "4sds5-1500w",
+          "name": "4SDS5-1500w (2.0HP) AD",
+          "price": "47,000",
+          "specs": {
+            "Power": "1500W (2.0HP)",
+            "Flow Rate": "5.0m³/h",
+            "Max Head": "168M",
+            "Water Depth": "0-139M",
+            "Outlet": "1.25\""
+          }
+        },
+        {
+          "id": "4sds5-2200w",
+          "name": "4SDS5-2200w (3.0HP) AD",
+          "price": "52,000",
+          "specs": {
+            "Power": "2200W (3.0HP)",
+            "Flow Rate": "5.0m³/h",
+            "Max Head": "235M",
+            "Water Depth": "0-194M",
+            "Outlet": "1.5\""
+          }
+        },
+        {
+          "id": "4sds5-3000w",
+          "name": "4SDS5-3000w (4.0HP) AD",
+          "price": "56,500",
+          "specs": {
+            "Power": "3000W (4.0HP)",
+            "Flow Rate": "5.0m³/h",
+            "Max Head": "285M",
+            "Water Depth": "0-235M",
+            "Outlet": "1.5\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "AC/DC Hybrid PUMP - 4SDS7 Series",
+      "products": [
+        {
+          "id": "4sds7-800w",
+          "name": "4SDS7-800w (1.0HP) AD",
+          "price": "42,000",
+          "specs": {
+            "Power": "800W (1.0HP)",
+            "Flow Rate": "7.0m³/h",
+            "Max Head": "60M",
+            "Water Depth": "0-52M",
+            "Outlet": "1.25\""
+          }
+        },
+        {
+          "id": "4sds7-1100w",
+          "name": "4SDS7-1100w (1.5HP) AD",
+          "price": "45,000",
+          "specs": {
+            "Power": "1100W (1.5HP)",
+            "Flow Rate": "7.0m³/h",
+            "Max Head": "95M",
+            "Water Depth": "0-83M",
+            "Outlet": "1.25\""
+          }
+        },
+        {
+          "id": "4sds7-2200w",
+          "name": "4SDS7-2200w (3.0HP) AD",
+          "price": "54,000",
+          "specs": {
+            "Power": "2200W (3.0HP)",
+            "Flow Rate": "7.0m³/h",
+            "Max Head": "185M",
+            "Water Depth": "0-161M",
+            "Outlet": "1.5\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "AC/DC Hybrid PUMP - 4SDS10 Series",
+      "products": [
+        {
+          "id": "4sds10-1500w",
+          "name": "4SDS10-1500w (2.0HP) AD",
+          "price": "48,000",
+          "specs": {
+            "Power": "1500W (2.0HP)",
+            "Flow Rate": "10.0m³/h",
+            "Max Head": "105M",
+            "Water Depth": "0-82M",
+            "Outlet": "2\""
+          }
+        },
+        {
+          "id": "4sds10-2200w",
+          "name": "4SDS10-2200w (3.0HP) AD",
+          "price": "52,500",
+          "specs": {
+            "Power": "2200W (3.0HP)",
+            "Flow Rate": "10.0m³/h",
+            "Max Head": "155M",
+            "Water Depth": "0-122M",
+            "Outlet": "2\""
+          }
+        },
+        {
+          "id": "4sds10-3000w",
+          "name": "4SDS10-3000w (4.0HP) AD",
+          "price": "57,000",
+          "specs": {
+            "Power": "3000W (4.0HP)",
+            "Flow Rate": "10.0m³/h",
+            "Max Head": "190M",
+            "Water Depth": "0-149M",
+            "Outlet": "2\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "AC/DC Hybrid PUMP - 4SF5 Series",
+      "products": [
+        {
+          "id": "4sf5-4000w",
+          "name": "4SF5-230-4000w (5.5HP) AD",
+          "price": "98,000",
+          "specs": {
+            "Power": "4000W (5.5HP)",
+            "Flow Rate": "8.4m³/h",
+            "Max Head": "345M",
+            "Water Depth": "0-330M",
+            "Outlet": "2\""
+          }
+        },
+        {
+          "id": "4sf5-5500w",
+          "name": "4SF5-300-5500w (7.5HP) AD",
+          "price": "118,000",
+          "specs": {
+            "Power": "5500W (7.5HP)",
+            "Flow Rate": "8.4m³/h",
+            "Max Head": "412M",
+            "Water Depth": "0-406M",
+            "Outlet": "2\""
+          }
+        },
+        {
+          "id": "4sf5-7500w",
+          "name": "4SF5-367-7500w (10.0HP) AD",
+          "price": "138,000",
+          "specs": {
+            "Power": "7500W (10.0HP)",
+            "Flow Rate": "8.4m³/h",
+            "Max Head": "515M",
+            "Water Depth": "0-505M",
+            "Outlet": "2\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "AC/DC Hybrid PUMP - 4SF10 Series",
+      "products": [
+        {
+          "id": "4sf10-4000w",
+          "name": "4SF10-120-4000w (5.5HP) AD",
+          "price": "112,000",
+          "specs": {
+            "Power": "4000W (5.5HP)",
+            "Flow Rate": "14.4m³/h",
+            "Max Head": "210M",
+            "Water Depth": "0-210M",
+            "Outlet": "2\""
+          }
+        },
+        {
+          "id": "4sf10-5500w",
+          "name": "4SF10-158-5500w (7.5HP) AD",
+          "price": "137,000",
+          "specs": {
+            "Power": "5500W (7.5HP)",
+            "Flow Rate": "14.4m³/h",
+            "Max Head": "272M",
+            "Water Depth": "0-265M",
+            "Outlet": "2\""
+          }
+        },
+        {
+          "id": "4sf10-7500w",
+          "name": "4SF10-196-7500w (10.0HP) AD",
+          "price": "157,000",
+          "specs": {
+            "Power": "7500W (10.0HP)",
+            "Flow Rate": "14.4m³/h",
+            "Max Head": "336M",
+            "Water Depth": "0-328M",
+            "Outlet": "2\""
+          }
+        },
+        {
+          "id": "4sf10-9200w",
+          "name": "4SF10-234-9200w (12.5HP) AD",
+          "price": "182,000",
+          "specs": {
+            "Power": "9200W (12.5HP)",
+            "Flow Rate": "14.4m³/h",
+            "Max Head": "400M",
+            "Water Depth": "0-386M",
+            "Outlet": "2\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "AC PUMP - Ordinary Impeller",
+      "products": [
+        {
+          "id": "ac-ordinary-7",
+          "name": "4SDM3/7 (0.5HP)",
+          "price": "13,000",
+          "specs": {
+            "Power": "500W (0.5HP)",
+            "Flow Rate": "4.8m³/h",
+            "Max Head": "50M",
+            "Water Depth": "0-47M",
+            "Outlet": "1\""
+          }
+        },
+        {
+          "id": "ac-ordinary-10",
+          "name": "4SDM3/10 (0.75HP)",
+          "price": "14,500",
+          "specs": {
+            "Power": "600W (0.75HP)",
+            "Flow Rate": "4.8m³/h",
+            "Max Head": "72M",
+            "Water Depth": "0-68M",
+            "Outlet": "1\""
+          }
+        },
+        {
+          "id": "ac-ordinary-13",
+          "name": "4SDM3/13 (1.0HP)",
+          "price": "17,000",
+          "specs": {
+            "Power": "800W (1.0HP)",
+            "Flow Rate": "4.8m³/h",
+            "Max Head": "93M",
+            "Water Depth": "0-88M",
+            "Outlet": "1\""
+          }
+        },
+        {
+          "id": "ac-ordinary-18",
+          "name": "4SDM3/18 (1.5HP)",
+          "price": "21,000",
+          "specs": {
+            "Power": "1100W (1.5HP)",
+            "Flow Rate": "4.8m³/h",
+            "Max Head": "122M",
+            "Water Depth": "0-115M",
+            "Outlet": "1\""
+          }
+        },
+        {
+          "id": "ac-ordinary-22",
+          "name": "4SDM3/22 (2.0HP)",
+          "price": "25,000",
+          "specs": {
+            "Power": "1500W (2.0HP)",
+            "Flow Rate": "4.8m³/h",
+            "Max Head": "158M",
+            "Water Depth": "0-149M",
+            "Outlet": "1\""
+          }
+        },
+        {
+          "id": "ac-ordinary-30",
+          "name": "4SDM3/30 (3.0HP)",
+          "price": "33,000",
+          "specs": {
+            "Power": "2200W (3.0HP)",
+            "Flow Rate": "4.8m³/h",
+            "Max Head": "215M",
+            "Water Depth": "0-203M",
+            "Outlet": "1.5\""
+          }
+        },
+        {
+          "id": "ac-ordinary-40",
+          "name": "4SDM3/40 (4.0HP)",
+          "price": "42,500",
+          "specs": {
+            "Power": "3000W (4.0HP)",
+            "Flow Rate": "4.8m³/h",
+            "Max Head": "287M",
+            "Water Depth": "0-271M",
+            "Outlet": "1.5\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "AC PUMP - 3 Phase",
+      "products": [
+        {
+          "id": "ac-3phase-30",
+          "name": "4SD3/30 (3.0HP)",
+          "price": "34,000",
+          "specs": {
+            "Power": "2200W (3.0HP)",
+            "Flow Rate": "4.8m³/h",
+            "Max Head": "215M",
+            "Water Depth": "0-203M",
+            "Outlet": "1.5\""
+          }
+        },
+        {
+          "id": "ac-3phase-40",
+          "name": "4SD3/40 (4.0HP)",
+          "price": "45,500",
+          "specs": {
+            "Power": "3000W (4.0HP)",
+            "Flow Rate": "4.8m³/h",
+            "Max Head": "287M",
+            "Water Depth": "0-271M",
+            "Outlet": "1.5\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "AC Booster PUMP",
+      "products": [
+        {
+          "id": "ac-booster-qbm60",
+          "name": "QBM60 (0.5HP)",
+          "price": "2,500",
+          "specs": {
+            "Power": "500W (0.5HP)",
+            "Flow Rate": "2.2m³/h",
+            "Max Head": "35M",
+            "Water Depth": "0-21M",
+            "Outlet": "1\""
+          }
+        },
+        {
+          "id": "ac-booster-cpm158",
+          "name": "CPM 158/1 (1HP)",
+          "price": "9,000",
+          "specs": {
+            "Power": "800W (1.0HP)",
+            "Flow Rate": "5.4m³/h",
+            "Max Head": "36M",
+            "Water Depth": "0-34M",
+            "Outlet": "1\""
+          }
+        },
+        {
+          "id": "ac-booster-cpm190",
+          "name": "CPM 190/1 (2HP)",
+          "price": "16,500",
+          "specs": {
+            "Power": "1500W (2.0HP)",
+            "Flow Rate": "8.4m³/h",
+            "Max Head": "40M",
+            "Water Depth": "0-39M",
+            "Outlet": "1\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "AC Well PUMP",
+      "products": [
+        {
+          "id": "ac-well-scm3",
+          "name": "SCM3 (0.75HP)",
+          "price": "16,000",
+          "specs": {
+            "Power": "600W (0.75HP)",
+            "Flow Rate": "6.6m³/h",
+            "Max Head": "38M",
+            "Water Depth": "0-36M",
+            "Outlet": "1\""
+          }
+        },
+        {
+          "id": "ac-well-scm5",
+          "name": "SCM5 (1.25HP)",
+          "price": "19,000",
+          "specs": {
+            "Power": "1000W (1.25HP)",
+            "Flow Rate": "6.6m³/h",
+            "Max Head": "64M",
+            "Water Depth": "0-61M",
+            "Outlet": "1\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "Solar Panels",
+      "products": [
+        {
+          "id": "solar-450w",
+          "name": "450W Solar Panel",
+          "price": "9,900",
+          "specs": {
+            "Power": "450W",
+            "Type": "Monocrystalline",
+            "Efficiency": "22.5%",
+            "Voltage": "48V",
+            "Warranty": "25 Years"
+          }
+        },
+        {
+          "id": "solar-550w",
+          "name": "550W Solar Panel",
+          "price": "12,100",
+          "specs": {
+            "Power": "550W",
+            "Type": "Monocrystalline",
+            "Efficiency": "22.8%",
+            "Voltage": "48V",
+            "Warranty": "25 Years"
+          }
+        },
+        {
+          "id": "solar-625w",
+          "name": "625W Solar Panel",
+          "price": "13,750",
+          "specs": {
+            "Power": "625W",
+            "Type": "Monocrystalline",
+            "Efficiency": "23.0%",
+            "Voltage": "48V",
+            "Warranty": "25 Years"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Accessories",
+      "products": [
+        {
+          "id": "acc-controller",
+          "name": "MPPT Solar Controller",
+          "price": "8,500",
+          "specs": {
+            "Type": "MPPT",
+            "Voltage": "48V",
+            "Current": "60A",
+            "Features": "WiFi Monitoring"
+          }
+        },
+        {
+          "id": "acc-inverter",
+          "name": "Solar Inverter 5KW",
+          "price": "45,000",
+          "specs": {
+            "Power": "5000W",
+            "Input": "48V DC",
+            "Output": "230V AC",
+            "Features": "Pure Sine Wave"
+          }
+        },
+        {
+          "id": "acc-battery",
+          "name": "Lithium Battery 10KWh",
+          "price": "120,000",
+          "specs": {
+            "Capacity": "10KWh",
+            "Voltage": "48V",
+            "Chemistry": "LiFePO4",
+            "Warranty": "10 Years"
+          }
+        }
+      ]
+    }
+  ]
+}
