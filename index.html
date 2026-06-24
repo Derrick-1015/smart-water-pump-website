@@ -852,8 +852,8 @@
 
                     <div class="contact-social">
                         <a href="https://wa.me/254790002162" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.facebook.com/share/17ys1Up46B/" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@doyin.pump.kenya5" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/people/Smart-Water-Pump-Ke/61587777900975/" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@smartwaterpumpke" class="social-link" target="_blank"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 <div class="contact-cta">
@@ -899,18 +899,15 @@
                     
                     const imageDiv = document.createElement('div');
                     imageDiv.className = 'product-category-image';
-                    imageDiv.innerHTML = `<img src="./assets/product_photo_${(catIndex % 16) + 1}.webp" alt="${category.name}" loading="lazy">`;
+                    imageDiv.innerHTML = `<img src="${category.image || `./assets/product_photo_${(catIndex % 16) + 1}.webp`}" alt="${category.name}" loading="lazy">`;
                     
                     const infoDiv = document.createElement('div');
                     infoDiv.className = 'product-category-info';
                     infoDiv.innerHTML = `
                         <h3>${category.name}</h3>
-                        <p>High-performance water pumping solutions designed for maximum efficiency and reliability.</p>
+                        <p>${category.description || 'High-performance water pumping solutions designed for maximum efficiency and reliability.'}</p>
                         <ul class="product-category-features">
-                            <li>Premium quality construction</li>
-                            <li>Energy efficient operation</li>
-                            <li>Extended warranty coverage</li>
-                            <li>Expert technical support</li>
+                            ${(category.features || ['Premium quality construction', 'Energy efficient operation', 'Extended warranty coverage', 'Expert technical support']).map(f => `<li>${f}</li>`).join('')}
                         </ul>
                     `;
                     
@@ -941,7 +938,7 @@
                     overviewTab.className = 'tab-content active';
                     overviewTab.innerHTML = `
                         <h4>${category.name}</h4>
-                        <p>This category includes a comprehensive range of ${category.name.toLowerCase()} products designed to meet various water pumping requirements. Each product is engineered for durability, efficiency, and reliable performance in diverse applications.</p>
+                        <p>${category.description || `This category includes a comprehensive range of ${category.name.toLowerCase()} products designed to meet various water pumping requirements.`}</p>
                         <p>Our products are suitable for agricultural irrigation, domestic water supply, commercial applications, and industrial uses. They are built with premium materials and advanced technology to ensure long-term reliability and minimal maintenance.</p>
                     `;
                     tabsDiv.appendChild(overviewTab);
@@ -1059,6 +1056,7 @@
 
         // Gallery Carousel
         const galleryImages = [
+            './assets/social_media/main_solar_pump_poster.webp',
             './assets/product_photo_01.webp', './assets/product_photo_02.webp', './assets/product_photo_03.webp',
             './assets/product_photo_04.webp', './assets/product_photo_05.webp', './assets/product_photo_06.webp',
             './assets/product_photo_07.webp', './assets/product_photo_08.webp', './assets/product_photo_09.webp',
