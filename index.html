@@ -903,7 +903,10 @@
                     
                     const imageDiv = document.createElement('div');
                     imageDiv.className = 'product-category-image';
-                    imageDiv.innerHTML = `<img src="${category.image || `./assets/product_photo_${(catIndex % 16) + 1}.webp`}" alt="${category.name}" loading="lazy">`;
+                    let imgSrc = category.image || `assets/product_photo_${(catIndex % 16) + 1}.webp`;
+                    // Ensure the path is correct for GitHub Pages
+                    if (imgSrc.startsWith('./')) imgSrc = imgSrc.substring(2);
+                    imageDiv.innerHTML = `<img src="${imgSrc}" alt="${category.name}" loading="lazy" onerror="this.src='assets/product_photo_01.webp'; console.error('Failed to load image:', '${imgSrc}')">`;
                     
                     const infoDiv = document.createElement('div');
                     infoDiv.className = 'product-category-info';
