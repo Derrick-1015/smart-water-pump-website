@@ -2,7 +2,7 @@
   "categories": [
     {
       "name": "DC PUMP - Ordinary Impeller",
-      "image": "assets/social_media/dc_ordinary/dc_pump_ordinary_impeller_1.webp",
+      "image": "assets/social_media/dc_ordinary/main.webp",
       "description": "High-performance DC solar pumps with ordinary impellers, perfect for clean water applications in farms and homes across Kenya.",
       "features": [
         "Powered by DC Solar Energy",
@@ -87,7 +87,7 @@
     },
     {
       "name": "DC PUMP - Stainless Steel Impeller",
-      "image": "assets/product_photo_07.webp",
+      "image": "assets/social_media/dc_stainless/main.webp",
       "description": "Durable DC solar pumps with stainless steel impellers, designed for silt/saline water and long-lasting performance.",
       "features": [
         "Stainless Steel Impellers",
@@ -160,7 +160,7 @@
     },
     {
       "name": "AC/DC Hybrid PUMP - 4SDS5 Series",
-      "image": "assets/social_media/ac_dc_hybrid/ac_dc_hybrid_pump_1.webp",
+      "image": "assets/social_media/ac_dc_hybrid/main.webp",
       "description": "Versatile AC/DC hybrid pumps that work with both solar panels and grid electricity for 24/7 water supply.",
       "features": [
         "Dual Power Source (AC/DC)",
@@ -221,7 +221,7 @@
     },
     {
       "name": "AC PUMP - Ordinary Impeller",
-      "image": "assets/product_photo_05.webp",
+      "image": "assets/social_media/ac_ordinary/main.webp",
       "description": "Reliable AC powered submersible pumps for traditional grid-connected water systems.",
       "features": [
         "High Pressure Output",

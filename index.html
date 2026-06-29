@@ -498,7 +498,7 @@
             color: var(--text);
         }
 
-        .specs-table tbody tr:hover {
+        .specs-table tr:nth-child(even) {
             background: var(--bg-light);
         }
 
@@ -928,186 +928,169 @@
                     
                     const tabButtonsDiv = document.createElement('div');
                     tabButtonsDiv.className = 'tab-buttons';
+                    tabButtonsDiv.innerHTML = `
+                        <button class="tab-btn active" onclick="switchTab(event, 'overview-${catIndex}')">Overview</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'specs-${catIndex}')">Specifications</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'features-${catIndex}')">Features</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'downloads-${catIndex}')">Downloads</button>
+                    `;
                     
-                    const tabs = ['Overview', 'Specifications', 'Features', 'Downloads'];
-                    tabs.forEach((tabName, tabIndex) => {
-                        const btn = document.createElement('button');
-                        btn.className = `tab-btn ${tabIndex === 0 ? 'active' : ''}`;
-                        btn.textContent = tabName;
-                        btn.onclick = () => switchTab(tabsDiv, tabIndex);
-                        tabButtonsDiv.appendChild(btn);
-                    });
-                    
-                    tabsDiv.appendChild(tabButtonsDiv);
+                    const tabContentDiv = document.createElement('div');
+                    tabContentDiv.className = 'tab-contents';
                     
                     // Overview Tab
                     const overviewTab = document.createElement('div');
+                    overviewTab.id = `overview-${catIndex}`;
                     overviewTab.className = 'tab-content active';
                     overviewTab.innerHTML = `
                         <h4>${category.name}</h4>
-                        <p>${category.description || `This category includes a comprehensive range of ${category.name.toLowerCase()} products designed to meet various water pumping requirements.`}</p>
+                        <p>This category includes a comprehensive range of ${category.name.toLowerCase()} products designed to meet various water pumping requirements.</p>
                         <p>Our products are suitable for agricultural irrigation, domestic water supply, commercial applications, and industrial uses. They are built with premium materials and advanced technology to ensure long-term reliability and minimal maintenance.</p>
                     `;
-                    tabsDiv.appendChild(overviewTab);
                     
-                    // Specifications Tab
+                    // Specifications Tab (Table)
                     const specsTab = document.createElement('div');
+                    specsTab.id = `specs-${catIndex}`;
                     specsTab.className = 'tab-content';
-                    const specsTable = createSpecsTable(category.products);
-                    specsTab.innerHTML = `<h4>Technical Specifications</h4>`;
-                    specsTab.appendChild(specsTable);
-                    tabsDiv.appendChild(specsTab);
+                    let specsTableHTML = `
+                        <h4>Technical Specifications</h4>
+                        <div style="overflow-x: auto;">
+                            <table class="specs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Model</th>
+                                        <th>Power</th>
+                                        <th>Flow Rate</th>
+                                        <th>Max Head</th>
+                                        <th>Price (KES)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${category.products.map(p => `
+                                        <tr>
+                                            <td>${p.name}</td>
+                                            <td>${p.specs.Power}</td>
+                                            <td>${p.specs['Flow Rate']}</td>
+                                            <td>${p.specs['Max Head']}</td>
+                                            <td><strong>${p.price}</strong></td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        </div>
+                    `;
+                    specsTab.innerHTML = specsTableHTML;
                     
                     // Features Tab
                     const featuresTab = document.createElement('div');
+                    featuresTab.id = `features-${catIndex}`;
                     featuresTab.className = 'tab-content';
                     featuresTab.innerHTML = `
-                        <h4>Key Features</h4>
+                        <h4>Key Features & Benefits</h4>
                         <ul>
-                            <li>Advanced motor technology for optimal performance</li>
-                            <li>Corrosion-resistant materials for extended lifespan</li>
-                            <li>Efficient impeller design for maximum flow rates</li>
-                            <li>Low noise operation for residential and commercial use</li>
-                            <li>Easy installation and maintenance</li>
-                            <li>Comprehensive warranty and after-sales support</li>
+                            ${(category.features || ['High durability', 'Efficient motor', 'Easy installation']).map(f => `<li>${f}</li>`).join('')}
+                            <li>Optimized for Kenyan environmental conditions</li>
+                            <li>Comprehensive warranty coverage</li>
+                            <li>Ready availability of spare parts</li>
                         </ul>
                     `;
-                    tabsDiv.appendChild(featuresTab);
                     
                     // Downloads Tab
                     const downloadsTab = document.createElement('div');
+                    downloadsTab.id = `downloads-${catIndex}`;
                     downloadsTab.className = 'tab-content';
                     downloadsTab.innerHTML = `
-                        <h4>Available Downloads</h4>
-                        <p>Product brochures, technical datasheets, and installation guides are available upon request.</p>
-                        <p>Please contact our sales team at <strong>smartwaterpumpke@gmail.com</strong> or call <strong>+254 790 002 162</strong> to request specific documentation.</p>
+                        <h4>Resources</h4>
+                        <p>Download product brochures and installation manuals for the ${category.name}.</p>
+                        <div style="margin-top: 1rem;">
+                            <a href="#" class="btn btn-outline" style="margin-right: 1rem; margin-bottom: 1rem;">
+                                <i class="fas fa-file-pdf"></i> Product Brochure
+                            </a>
+                            <a href="#" class="btn btn-outline" style="margin-bottom: 1rem;">
+                                <i class="fas fa-tools"></i> Installation Guide
+                            </a>
+                        </div>
                     `;
-                    tabsDiv.appendChild(downloadsTab);
                     
+                    tabContentDiv.appendChild(overviewTab);
+                    tabContentDiv.appendChild(specsTab);
+                    tabContentDiv.appendChild(featuresTab);
+                    tabContentDiv.appendChild(downloadsTab);
+                    
+                    tabsDiv.appendChild(tabButtonsDiv);
+                    tabsDiv.appendChild(tabContentDiv);
                     categoryDiv.appendChild(tabsDiv);
+                    
                     container.appendChild(categoryDiv);
                 });
-            } catch (err) {
-                console.error("Error loading products:", err);
+            } catch (error) {
+                console.error("Error loading products:", error);
             }
         }
 
-        function createSpecsTable(products) {
-            const table = document.createElement('table');
-            table.className = 'specs-table';
+        // Tab switching logic
+        function switchTab(event, tabId) {
+            const tabsContainer = event.target.closest('.product-tabs');
             
-            if (products.length === 0) return table;
+            // Update buttons
+            const buttons = tabsContainer.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
             
-            // Get all unique spec keys
-            const specKeys = new Set();
-            products.forEach(p => {
-                Object.keys(p.specs).forEach(key => specKeys.add(key));
-            });
-            
-            // Create header
-            const thead = document.createElement('thead');
-            const headerRow = document.createElement('tr');
-            const nameHeader = document.createElement('th');
-            nameHeader.textContent = 'Model';
-            headerRow.appendChild(nameHeader);
-            
-            const priceHeader = document.createElement('th');
-            priceHeader.textContent = 'Price (KSh)';
-            headerRow.appendChild(priceHeader);
-            
-            Array.from(specKeys).forEach(key => {
-                const th = document.createElement('th');
-                th.textContent = key;
-                headerRow.appendChild(th);
-            });
-            thead.appendChild(headerRow);
-            table.appendChild(thead);
-            
-            // Create body
-            const tbody = document.createElement('tbody');
-            products.forEach(p => {
-                const row = document.createElement('tr');
-                
-                const nameCell = document.createElement('td');
-                nameCell.textContent = p.name;
-                row.appendChild(nameCell);
-                
-                const priceCell = document.createElement('td');
-                priceCell.textContent = p.price;
-                row.appendChild(priceCell);
-                
-                Array.from(specKeys).forEach(key => {
-                    const cell = document.createElement('td');
-                    cell.textContent = p.specs[key] || '—';
-                    row.appendChild(cell);
-                });
-                tbody.appendChild(row);
-            });
-            table.appendChild(tbody);
-            
-            return table;
+            // Update content
+            const contents = tabsContainer.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
         }
 
-        function switchTab(tabsDiv, tabIndex) {
-            const buttons = tabsDiv.querySelectorAll('.tab-btn');
-            const contents = tabsDiv.querySelectorAll('.tab-content');
-            
-            buttons.forEach((btn, idx) => {
-                btn.classList.toggle('active', idx === tabIndex);
-            });
-            
-            contents.forEach((content, idx) => {
-                content.classList.toggle('active', idx === tabIndex);
-            });
-        }
-
-        // Gallery Carousel
-        const galleryImages = [
-            './assets/social_media/main_solar_pump_poster.webp',
-            './assets/product_photo_01.webp', './assets/product_photo_02.webp', './assets/product_photo_03.webp',
-            './assets/product_photo_04.webp', './assets/product_photo_05.webp', './assets/product_photo_06.webp',
-            './assets/product_photo_07.webp', './assets/product_photo_08.webp', './assets/product_photo_09.webp',
-            './assets/product_photo_10.webp', './assets/product_photo_11.webp', './assets/product_photo_12.webp',
-            './assets/product_photo_13.webp', './assets/product_photo_14.webp', './assets/product_photo_15.webp',
-            './assets/product_photo_16.webp'
-        ];
-
-        function initGallery() {
+        // Carousel Logic
+        function initCarousel() {
             const track = document.getElementById('carousel-track');
-            galleryImages.forEach(src => {
-                const slide = document.createElement('div');
-                slide.className = 'carousel-slide';
-                slide.innerHTML = `<img src="${src}" alt="Installation" loading="lazy">`;
-                track.appendChild(slide);
-            });
-
-            let currentSlide = 0;
-            const nextBtn = document.getElementById('next-btn');
             const prevBtn = document.getElementById('prev-btn');
-
+            const nextBtn = document.getElementById('next-btn');
+            
+            const images = [
+                'assets/social_media/gallery/poster.webp',
+                'assets/product_photo_01.webp',
+                'assets/product_photo_02.webp',
+                'assets/product_photo_03.webp',
+                'assets/product_photo_04.webp'
+            ];
+            
+            track.innerHTML = images.map(img => `
+                <div class="carousel-slide">
+                    <img src="${img}" alt="Installation" loading="lazy" onerror="this.src='assets/product_photo_01.webp'">
+                </div>
+            `).join('');
+            
+            let currentIndex = 0;
+            const slides = track.children;
+            
             function updateCarousel() {
-                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
             }
-
-            nextBtn.onclick = () => {
-                currentSlide = (currentSlide + 1) % galleryImages.length;
+            
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slides.length;
                 updateCarousel();
-            };
-
-            prevBtn.onclick = () => {
-                currentSlide = (currentSlide - 1 + galleryImages.length) % galleryImages.length;
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
                 updateCarousel();
-            };
-
+            });
+            
+            // Auto play
             setInterval(() => {
-                currentSlide = (currentSlide + 1) % galleryImages.length;
+                currentIndex = (currentIndex + 1) % slides.length;
                 updateCarousel();
-            }, 6000);
+            }, 5000);
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
+        // Initialize everything
+        window.addEventListener('DOMContentLoaded', () => {
             loadProducts();
-            initGallery();
+            initCarousel();
         });
     </script>
 </body>
